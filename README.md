@@ -20,3 +20,43 @@ If you aren’t sure what a hash is, [here’s an explanation](https://learncryp
 ```Python
 pip install Flask==0.12.2 requests==2.18.4 
 ```
+
+Oh, you’ll also need an HTTP Client, like [Postman](https://www.getpostman.com/) or cURL. But anything will do.
+
+***Where’s the final code?*** The source code is available [here](https://github.com/dvf/blockchain?).
+
+# Step 1: Building a Blockchain
+
+Open up your favourite text editor or IDE, personally I ❤️ [PyCharm](https://www.jetbrains.com/pycharm). Create a new file, called
+```blockchain.py```
+
+We’ll only use a single file, but if you get lost, you can always refer to [the source code](https://github.com/dvf/blockchain).
+
+### Representing a Blockchain
+We’ll create a ```Blockchain```
+
+class whose constructor creates an initial empty list (to store our blockchain), and another to store transactions. Here’s the blueprint for our class:
+
+```python
+class Blockchain(object):
+    def __init__(self):
+        self.chain = []
+        self.current_transactions = []
+        
+    def new_block(self):
+        # Creates a new Block and adds it to the chain
+        pass
+    
+    def new_transaction(self):
+        # Adds a new transaction to the list of transactions
+        pass
+    
+    @staticmethod
+    def hash(block):
+        # Hashes a Block
+        pass
+
+    @property
+    def last_block(self):
+        # Returns the last Block in the chain
+        pass
